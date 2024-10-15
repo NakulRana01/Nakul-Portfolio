@@ -1,0 +1,90 @@
+/* General container for education sections */
+.education-container {
+    margin: 4rem 0;
+}
+
+/* Divided container for multiple sections like 10th, 12th, Graduation */
+.divided-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    margin: 4rem 0;
+    align-items: flex-start; /* Ensure top alignment */
+}
+
+/* Flexbox adjustments to align 10th and 12th side by side */
+.education-card-container {
+    flex: 1;
+    min-width: 300px; /* Ensures smaller cards don't collapse in narrow screens */
+    margin-bottom: 2rem; /* Add some space below each section */
+}
+
+/* General card styling */
+.education-card {
+    background: #130f2a;
+    border-radius: 0.65rem;
+    border: 1.5px solid #6751b9;
+    padding: 1.5rem;
+    margin: 0 1rem;
+    min-height: 16rem;
+}
+
+/* Section Headings */
+.education-card-container h5,
+.education-card-container h6 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.education-card h6 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Styling for Percentage, Courses, and other point titles */
+.point-title {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 0.9rem;
+    background: rgba(103, 81, 185, 0.5);
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.4rem;
+    margin-top: 0.5rem;
+}
+
+/* Duration styling */
+.education-duration {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    background: rgba(103, 81, 185, 0.5);
+    border-radius: 0.3rem;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .divided-container {
+        flex-direction: column; /* Stack the cards vertically on smaller screens */
+    }
+    .education-card-container h5,
+    .education-card-container h6 {
+        font-size: 1.2rem;
+    }
+    .education-card {
+        margin: 0 0 2rem;
+    }
+    .education-card h6 {
+        font-size: 1rem;
+    }
+    .point-title {
+        font-size: 0.75rem;
+    }
+    .education-duration {
+        font-size: 0.7rem;
+    }
+}
